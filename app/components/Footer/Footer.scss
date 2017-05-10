@@ -1,0 +1,22 @@
+#contact, #footer {
+	padding: 30px 10px;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+}
+#contact {
+	align-items: center;
+	background: $primary-color;
+
+}
+#footer {	
+	background: $secondary-color;	
+
+	@include respond-to(handhelds) {
+		flex-direction: column;
+	}
+
+	>div {
+
+	}
+}

@@ -1,0 +1,52 @@
+$beer: #e87c00;
+$white: #fff;
+
+@-webkit-keyframes bubbles {
+  0%   {
+    visibility: visible;
+    transform: scale(0.0);
+    top: 100%;
+  }
+  15%   {
+    transform: scale(1);
+    top: 100%;
+  }
+  100% {
+    top: -100%;
+    transform: translateY(-10%);
+  }
+}
+
+
+.beer {  
+  overflow: hidden;  
+}
+  
+@mixin blur($radius) {
+  -webkit-filter: blur($radius);
+  -moz-filter: blur($radius);
+  -o-filter: blur($radius);
+  -ms-filter: blur($radius);
+  filter: blur($radius);
+}
+
+@mixin animation($name, $duration) {
+  -webkit-animation: $name $duration;
+  -moz-animation:    $name $duration;
+  -o-animation:      $name $duration;
+  animation:         $name $duration;
+}
+
+.bubble {
+  position: absolute;
+  background-color: transparent;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/173991/bubble.png);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100%;
+  opacity: 0.5;
+  visibility: hidden;
+  @include blur(1px);
+  @include animation(bubbles, 7s infinite);
+  z-index: 1;
+}

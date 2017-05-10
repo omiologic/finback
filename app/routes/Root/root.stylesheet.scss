@@ -1,0 +1,89 @@
+// body {
+// 	height: 100%;
+// 	font-family: 'Roboto', sans-serif;
+// 	font-size: 16px;	
+// }
+
+// h1, h2, h3, h4, h5 {
+// 	font-family: 'Patua One', cursive;
+// }
+
+// @import './../../assets/scss/media';
+
+// ------------- MIXINS ------------- //
+@mixin transition($time, $property: all, $easing: ease-in) {
+    transition: $property $time $easing;
+}
+* {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -webkit-transform-style: flat;
+    -moz-transform-style: flat;
+    -ms-transform-style: flat;
+    -o-transform-style: flat;
+}
+* {
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+    -webkit-touch-callout: none;  
+  }
+// ------------- VARIABLES ------------- //
+$parallax-offset: 30vh;
+$content-offset: 40vh;
+$transition-speed: 1.2s;
+$slide-number: 4;
+
+.parallax-container {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+.parallax-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-color: white;
+  transition: none;
+  position: absolute;
+  transform-style: flat;
+  backface-visibility: hidden;  
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: rgb(255, 255, 255);  
+  font-family: Helvetica;
+  width: 100%;
+  transform: matrix(1, 0, 0, 1, 0, 0);  
+}
+
+// /* Set stacking context of slides */
+// @for $i from 1 to ($slide-number + 1) {
+//     .parallax-section:nth-child(#{$i}) {
+//         z-index: $i * 100; 
+//     }
+// }
+
+// Prallax.Nav
+.prev-btn {  
+  bottom: 120px;
+  right: 20px;
+}
+.next-btn {  
+  bottom: 80px;
+  right: 20px;
+}
+
+// @import './../../components/Parallax/stylesheet.scss';
+// @import './../../components/Content/stylesheet.scss';
+// @import './../../components/Beer/stylesheet.scss';
