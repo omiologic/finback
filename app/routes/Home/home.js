@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import * as Component from 'APP/app/components';
-import { Content, Parallax, Distortion, Footer } from '../../components';
-require('./home.stylesheet.scss');
+import { Content, Parallax, Distortion, Footer, MainGrid } from '../../components';
+// require('./home.stylesheet.scss');
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -43,14 +43,7 @@ class Home extends React.Component {
             </Distortion.Container>
           </div>
         </section>
-        <section id="main" >
-          <div style={{
-            height: '100vh',
-            backgroundColor: 'gray'
-          }}>
-            this is place holder for the main section
-          </div>
-        </section>
+        <MainGrid />
         <section id="contact">
           <div>
             <h2>Want to work with us?</h2>
