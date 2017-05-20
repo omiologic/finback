@@ -31,6 +31,8 @@ module.exports = {
     "no-tabs": "off",
     "import/first": "off",
     "import/export": "off",
+
+    "semi": ["error", "always"],
     // This rule enforces a comma-first style, such as
     // npm uses. I think it's great, but it can look a bit weird,
     // so we're leaving it off for now (although stock Bones passes

@@ -11,35 +11,36 @@ class Home extends React.Component {
       mouseY: (document.documentElement.clientHeight / 2),
     };
   }
-  onMouseMove(e) {    
+  onMouseMove(e) {
     this.setState({
       mouseX: e.pageX,
       mouseY: e.pageY,
-    });    
+    });
   }
-  render(){
+  render() {
     const { mouseX, mouseY } = this.state;
     // console.log('HOME PROPS', this.props);
     const medium = [
       {
-        id:1,
+        id: 1,
         url: './images/finback_01.png',
         type: 'image',
         sort: 1
-      },{
-        id:1,
+      },
+      {
+        id: 1,
         url: './images/finback_03.png',
         type: 'image',
         sort: 4
-      }   
-    ]
-    return(
+      }
+    ];
+    return (
       <div className="smart-sections">
         <section id="splash" className="fullscreen">
           <div className="parallax-section full-height" onMouseMove={this.onMouseMove.bind(this)}>
             <Distortion.Container mouseX={mouseX} mouseY={mouseY} >
               <Distortion.Content layer={medium[0]} />
-              <Distortion.Content layer={medium[1]} />            
+              <Distortion.Content layer={medium[1]} />
             </Distortion.Container>
           </div>
         </section>
@@ -61,7 +62,7 @@ class Home extends React.Component {
         </section>
         <Footer />
       </div>
-    )
+    );
   }
 }
 
