@@ -9,13 +9,15 @@ export const About = AboutComponent;
 export const Login = LoginComponent;
 
 // Section Components Group
-	import FooterComponent from './Footer/Footer';
-	import SplashComponent from './Splash/Splash';
-	export const Footer = FooterComponent;
-	export const Splash = SplashComponent;
+import MainGridComponent from './MainGrid/MainGrid';
+import FooterComponent from './Footer/Footer';
+import SplashComponent from './Splash/Splash';
+export const Footer = FooterComponent;
+export const Splash = SplashComponent;
+export const MainGrid = MainGridComponent;
 
 // Beer Components Group
-	import BeerComponent from './Beer/beer';
-	import OscillationComponent from './Beer/oscillation';
-	export const Beer = BeerComponent;
-	export const Oscillation = OscillationComponent;
+import BeerComponent from './Beer/beer';
+import OscillationComponent from './Beer/oscillation';
+export const Beer = BeerComponent;
+export const Oscillation = OscillationComponent;

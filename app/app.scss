@@ -21,14 +21,11 @@ h1, h2, h3, h4, h5 {
 @import '/assets/scss/button';
 @import './routes/Root/root.stylesheet.scss';
 @import './routes/Home/home.stylesheet.scss';
-// @import './components/Parallax/stylesheet.scss';
-// @import './components/Distortion/stylesheet.scss';
+
 @import './components/Content/stylesheet.scss';
 @import './components/Beer/oscillation.scss';
-
-
+@import './components/MainGrid/MainGrid.scss';
 @import './components/Footer/Footer.scss';
-
 
 #app {
   font-family: 'Roboto', sans-serif;

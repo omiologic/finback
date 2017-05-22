@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import * as Component from 'APP/app/components';
-import { Content, Parallax, Distortion, Footer, Splash } from '../../components';
+import { Content, Parallax, Distortion, Footer, Splash, MainGrid } from '../../components';
 require('./home.stylesheet.scss');
 
 const medium = [
@@ -30,14 +30,7 @@ class Home extends React.Component {
 		return (
 			<div className="smart-sections">
 				<Splash images={medium} />
-				<section id="main" >
-					<div style={{
-						height: '100vh',
-						backgroundColor: 'gray'
-					}}>
-						this is place holder for the main section
-					</div>
-				</section>
+				<MainGrid />
 				<section id="contact">
 					<div>
 						<h2>Want to work with us?</h2>
