@@ -1,9 +1,13 @@
-// $break-small: 414px;
-$break-tiny: 414px;
-$break-small: 734px;
-$break-medium: 1024px;
-$break-large: 1024px;
+/*
+ * ---------------------
+ * Media query framework
+ * ---------------------
+ * utilize respond-to($media) for all media querying
+ */
 
+$break-small: 414px;
+$break-medium: 734px;
+$break-large: 1024px;
 
 body {
   height: 100%;
@@ -11,13 +15,13 @@ body {
 
 @mixin respond-to($media) {
   @if $media == handhelds {
-    @media only screen and (max-width: $break-tiny) { @content; }
+    @media only screen and (max-width: $break-small) { @content; }
   }
   @else if $media == handhelds-landscape {
-    @media only screen and (min-width: $break-tiny + 1) and (max-width: $break-small) { @content; }
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
   }
   @else if $media == tablet {
-    @media (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+    @media (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
   }
   @else if $media == wide {
     @media only screen and (min-width: $break-large + 1) { @content; }
