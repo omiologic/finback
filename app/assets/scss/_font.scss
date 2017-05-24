@@ -1,0 +1,12 @@
+$san-serif: 'Roboto', sans-serif;
+$serif: 'Patua One', cursive;
+
+body {	
+	font-family: $san-serif;
+	font-size: 16px;	
+	color: rgb(255, 255, 255);
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $serif;
+}

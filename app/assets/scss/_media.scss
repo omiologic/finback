@@ -1,17 +1,30 @@
 // $break-small: 414px;
-$break-small: 736px;
-$break-large: 1026px;
+$break-tiny: 414px;
+$break-small: 734px;
+$break-medium: 1024px;
+$break-large: 1024px;
+
+
+body {
+  height: 100%;
+}
 
 @mixin respond-to($media) {
   @if $media == handhelds {
-    @media only screen and (max-width: $break-small) { @content; }
+    @media only screen and (max-width: $break-tiny) { @content; }
+  }
+  @else if $media == handhelds-landscape {
+    @media only screen and (min-width: $break-tiny + 1) and (max-width: $break-small) { @content; }
   }
   @else if $media == tablet {
-    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    @media (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
   }
   @else if $media == wide {
-    @media only screen and (min-width: $break-large) { @content; }
+    @media only screen and (min-width: $break-large + 1) { @content; }
   }
 }
 
-
+.fullscreen {
+  width: 100vw;
+  height: 100vh; 
+}
