@@ -3,145 +3,100 @@ import React, { Component } from 'react';
 export default class MainGridComponent extends Component {
 	render() {
 		return (
-			<section className="main-section">
-       	<div className="smart-grid">
-         <div className="row">
-           <div className="column">
-             <div className="smart-grid">
-               <div className="row">
-                 <div className="column small-block full-width">
-                   <div className="block block-text">
-                     <div className="block-title block-top-left">
-                       <div className="title">UPCOMING EVENT</div>
-                     </div>
-                     <div className="block-date block-top-right">
-                       <div className="month">DECEMBER</div>
-                       <div className="day">10</div>
-                     </div>
-                     <div className="block-content block-bottom-left">
-                       <div className="content">
-                         <h3>2nd Anniversary Party &amp; Oscillation 4 Release &amp; BQExC Release</h3>
-                       </div>
-                     </div> 
-                   </div>
-                 </div>
-                 <div className="column big-block full-width">
-                   <div className="block block-img" id="event">2</div>
-                 </div>
-               </div>
-             </div> 
-           </div>
-           <div className="column">
-             <div className="smart-grid">
-               <div className="row">
-                 <div className="column small-block pull-right">
-                   <div className="block block-text">
-                     <div className="block-title block-top-left">
-                       <div className="title">SHOP</div>
-                     </div>
-                     <div className="block-content block-bottom-left">
-                       <div className="content">
-                         <h3>Get some swag!</h3>
-                         <div>Finback gear and glassware</div>
-                       </div>
-                     </div> 
-                   </div>
-                 </div>
-                 <div className="column small-block pull-right">
-                   <div className="block block-text">
-                     <div className="block-title block-top-left">
-                       <div className="title">ABOUT FINBACK</div>
-                     </div>
-                     <div className="block-content block-bottom-left">
-                       <div className="content">
-                         <h3>More about who we are and what we do</h3>
-                       </div>
-                     </div> 
-                   </div>
-                 </div>
-                 <div className="column small-block full-width pull-right">
-                   <div className="block">5</div>
-                 </div>
-               </div>
-               <div className="row">
-                 <div className="column small-block">
-                   <div className="block block-text">
-                     <div className="block-title block-top-left">
-                       <div className="title">PRE-SALE</div>
-                     </div>
-                     <div className="block-content block-bottom-left">
-                       <div className="content">
-                         <h3>Grab our limited number pre-release</h3>
-                         <div>Community Supported Beer program</div>
-                       </div>
-                     </div> 
-                   </div>
-                 </div>
-                 <div className="column small-block">
-                   <div className="block">7</div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-         <div className="row">
-           <div className="column">
-             <div className="smart-grid">
-               <div className="row">     
-                 <div className="column big-block full-width"> 
-                   <div className="block block-text">
-                     <div className="block-title block-top-left">
-                       <div className="title">VIEW OUR BEERS</div>
-                     </div>
-                     <div className="block-content block-bottom-left">
-                       <div className="content">
-                         <h3>More about who we are and what we do</h3>
-                       </div>
-                     </div> 
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div className="column">
-             <div className="smart-grid">
-               <div className="row">           
-                 <div className="column small-block full-width">
-                   <div className="block block-text">
-                     <div className="block-title block-top-left">
-                       <div className="title">PRESS</div>
-                     </div>
-                     <div className="block-content block-bottom-left">
-                       <div className="content">
-                         <h3>DRAFT Magazine's 
-                         <br></br>
-                         The best beers we tasted this week picks Echelon</h3>
-                       </div>
-                     </div> 
-                   </div>
-                 </div>
-                 <div className="column small-block">
-                   <div className="block block-text">
-                     <div className="block-title block-top-left">
-                       <div className="title">JOIN MEMBER</div>
-                     </div>
-                     <div className="block-content block-bottom-left">
-                       <div className="content">
-                         <h3>Become a champion of local beer</h3>
-                         <div>Community Supported Beer program</div>
-                       </div>
-                     </div> 
-                   </div>
-                 </div>
-                 <div className="column small-block">
-                   <div className="block">11</div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       	</div>
-     	</section>
+			<section id="main-section">
+        <div className="flex flex-wrap flex-between">
+          <div className="flex flex-col flex-col-xs-100 flex-col-lg-50">
+            <div className="small-block block-text">
+              <div className="block-title top-left">
+                UPCOMING EVENT
+              </div>
+              <div className="block-date top-right">
+                <div className="month">
+                  May
+                </div>
+                <div className="day">
+                  15
+                </div>
+              </div>
+              <div className="block-header bottom-left">
+                2nd Anniversary Party &amp; Oscillation 4 Release &amp; BQExC Release
+              </div>
+            </div>
+            <div className="big-block block-img">
+              2
+            </div>
+          </div>
+          <div className="flex flex-wrap flex-between flex-col-xs-100 flex-col-lg-50">  
+            <div className="small-block flex-col-sm-100 flex-col-md-50">
+              <div className="block-title top-left">
+                ABOUT FINBACK
+              </div>
+              <div className="block-header bottom-left">
+                More about who we are and what we do
+              </div>
+            </div>
+            <div className="small-block flex-col-sm-100 flex-col-md-50">
+              <div className="block-title top-left">
+                SHOP
+              </div>
+              <div className="block-header lower-left">
+                Get some swag!
+              </div>
+              <div className="block-sub-header bottom-left">
+                Finback gear and glassware
+              </div>
+            </div>
+            <div className="small-block block-img flex-col-xs-100">
+              5
+            </div>
+            <div className="small-block flex-col-sm-100 flex-col-md-50">
+              <div className="block-title top-left">
+                PRE-SALE
+              </div>
+              <div className="block-header mid-lower-left">
+                Grab our limited number pre-release
+              </div>
+              <div className="block-sub-header bottom-left">
+                Community Supported Beer program
+              </div>
+            </div>
+            <div className="small-block flex-col-sm-100 flex-col-md-50">
+              7
+            </div>
+          </div>
+          <div className="flex flex-col flex-col-xs-100 flex-col-lg-50">
+            <div className="big-block block-img">
+              <div className="block-title top-left">
+                VIEW ALL BEER
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap flex-between flex-col-xs-100 flex-col-lg-50">  
+            <div className="small-block flex-col-xs-100">
+              <div className="block-title top-left">
+                PRESS
+              </div>
+              <div className="block-header bottom-left">
+                DRAFT Magazine's The best beers we tasted this week picks Echelon
+              </div>
+            </div>
+            <div className="small-block flex-col-sm-100 flex-col-md-50">
+              <div className="block-title top-left">
+                JOIN US
+              </div>
+              <div className="block-header mid-lower-left">
+                Become a champion of local beer
+              </div>
+              <div className="block-sub-header bottom-left">
+                Community Beer Supported program
+              </div>
+            </div>
+            <div className="small-block flex-col-sm-100 flex-col-md-50">
+              11
+            </div>
+          </div>
+        </div>
+      </section>
 		)
 	}
 }
