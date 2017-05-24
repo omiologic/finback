@@ -1,216 +1,87 @@
-body {
-	font-family: 'Roboto', sans-serif;
-	margin: 0;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: 'Patua One', cursive;
-}
-
 #main-section {
-	background-color: skyblue;
-}
+	&>div{
+		
+	}
+	.small-block, 
+	.big-block, 
+	.large-block {
+		margin-bottom: 6px;
+		background-color: grey;
+		position: relative;
 
-.flex {
-	width: 100%;
-	display: flex;
-}
-
-.flex-wrap {
-	flex-wrap: wrap;
-}
-
-.flex-col {
-	flex-direction: column;
-}
-
-.flex-between {
-	justify-content: space-between;
-}
-
-.small-block, .big-block, .large-block {
-	margin-bottom: 6px;
-	background-color: grey;
-	position: relative;
-}
-
-.small-block {
-	height: 294px;
-}
-
-.big-block {
-	height: 594px;
-}
-
-.lg-big-block {
-	height: 888px;
-}
-
-.block-title, .block-date, .block-header, .block-sub-header {
-	position: absolute;
-}
-
-.top-left {
-	top: 40px;
-	left: 30px;
-}
-
-.top-right {
-	top: 40px;
-	right: 30px;
-	text-align: center;
-}
-
-.mid-upper-left {
-	left: 30px;
-	right: 30px;
-	top: 65px;
-}
-
-.mid-lower-left {
-	left: 30px;
-	right: 30px;
-	top: calc(50% - 15px);
-}
-
-.lower-left {
-	left: 30px;
-	right: 30px;
-	bottom: 75px;
-}
-
-.bottom-left {
-	left: 30px;
-	bottom: 40px;
-	right: 30px;
-}
-
-.block-text {
-	position: relative;
-} 
-
-.block-title {
-	font-size: 18px;
-}
-
-.month {
-	font-size: 24px;
-}
-
-.day {
-	font-size: 36px;
-}
-
-.block-header {
-	font-size: 24px;
-}
-
-.block-sub-header {
-	font-size: 18px;
-}
-
-.block-img {
-	background-size: cover;
-}
-
-
-/*
-
-*/
-.flex-col-lg-100 {
-	width: 100%;
-}
-.flex-col-lg-50 {
-	width: calc(50% - 3px);
-}
-.flex-col-md-100 {
-	width: 100%;
-}
-.flex-col-md-50 {
-	width: calc(50% - 3px);
-}
-.flex-col-sm-100 {
-	width: 100%;
-}
-.flex-col-sm-50 {
-	width: calc(50% - 3px);
-}
-.flex-col-xs-100 {
-	width: 100%;
-}
-.flex-col-xs-50 {
-	width: calc(50% - 3px);
-}
-/*
-.flex-col-lg-100,
-.flex-col-md-100,
-.flex-col-sm-100,
-.flex-col-xs-100 {
-	width: 100%;
-}
-.flex-col-lg-50,
-.flex-col-md-50,
-.flex-col-sm-50,
-.flex-col-xs-50 {
-	width: calc(50% - 3px);
-}*/
-
-@media screen and (max-width: 414px) {	
-
-	.flex-col-xs-100 {
-		width: 100% !important;
+		/* 	TODO: we need this responsive 
+							let's put some media queries */
 	}
 
-	.flex-col-xs-50 {
-		width: calc(50% - 3px) !important;
-	}
-}
-
-@media screen and (max-width: 736px) and (orientation: landscape) {
-
-	.flex-col-sm-100 {
-		width: 100% !important;
+	.small-block {
+		height: 294px;
 	}
 
-	.flex-col-sm-50 {
-		width: calc(50% - 3px) !important;
+	.big-block {
+		height: 594px;
 	}
-}
 
-@media (min-width: 737px) and (max-width: 1024px) {
+	.lg-big-block {
+		height: 888px;
+	}
+
+	// .block-title, .block-date, .block-header, .block-sub-header {
+	// 	// position: absolute;
+	// }
+
 	
-	
-	.flex-col-sm-100 {
-		width: 100%;
-	}
-	
-	.flex-col-sm-50 {
-		width: calc(50% - 3px);
-	}
-	
-	.flex-col-md-100 {
-		width: 100% !important;
-	}
-	.flex-col-md-50 {
-		width: calc(50% - 3px) !important;
-	}
-}
+	.block-text,
+	.block-image {
 
-@media screen and (min-width: 1025px) {
-	
-	.flex-col-md-100,
-	.flex-col-sm-100 {
-		width: 100%;
-	}
-	.flex-col-md-50,
-	.flex-col-sm-50 {
-		width: calc(50% - 3px);
+		&>[class*="top-"],
+		&>[class*="bottom-"],
+		&>[class*="-both"],
+		&>[class*="-left"],
+		&>[class*="-right"] {
+			position: absolute;
+		}
+		&>[class*="top-"] {
+			top: 40px;
+		}
+		&>[class*="-both"] {
+			left: 30px;
+			right: 30px;			
+		}
+		&>[class*="-left"] {
+			left: 30px;			
+		}
+		&>[class*="-right"] {
+			right: 30px;			
+		}
+		&>[class*="bottom-"] {
+			bottom: 40px;			
+		}		
 	}
 
-  .flex-col-lg-100 {
-		width: 100% !important;
-	}	
-  .flex-col-lg-50 {
-		width: calc(50% - 3px) !important;
+	.block-text {
+		position: relative;
+		font-family: $san-serif;
+		.block-title {
+			font-size: 18px;			
+		}
+		.block-header {
+			font-size: 24px;
+			font-family: $serif;
+		}
+		.block-sub-header {
+			font-size: 18px;
+		}
+		.block-date {
+			.month {
+				font-size: 24px;
+			}
+			.day {
+				font-size: 36px;
+			}	
+		}
+	} 
+	.block-img {
+		background-size: cover;
+		background-position: center;	
 	}
 }
