@@ -5,24 +5,30 @@ import { Content, Parallax, Distortion, Footer, Splash, MainGrid } from '../../c
 require('./home.stylesheet.scss');
 
 const medium = [
-	// {
-	// 	id: 1,
-	// 	url: './images/finback_01.png',
-	// 	type: 'image',
-	// 	sort: 1
-	// },
-	// {
-	// 	id: 2,
-	// 	url: './images/finback_03.png',
-	// 	type: 'image',
-	// 	sort: 4
-	// },
+	{
+		id: 1,
+		url: './images/finback_01.png',
+		type: 'image',
+		sort: 1
+	},
+	{
+		id: 2,
+		url: './images/finback_02.png',
+		type: 'image',
+		sort: 3
+	},
 	{
 		id: 3,
-		url: 'FieldScout',
-		type: 'component',
-		sort: 1
-	}
+		url: './images/finback_03.png',
+		type: 'image',
+		sort: 4
+	},
+	// {
+	// 	id: 3,
+	// 	url: 'Oscillation',
+	// 	type: 'component',
+	// 	sort: 1
+	// }
 ];
 
 class Home extends React.Component {
