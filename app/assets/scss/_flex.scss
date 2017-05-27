@@ -1,0 +1,125 @@
+/*
+ * ------------
+ * Flex System
+ * ------------
+ * flex makes life easier :)
+ */
+
+.flex {
+	width: 100%;
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.flex-between {
+	justify-content: space-between;
+}
+
+.flex-col-xs-100 {
+	width: 100%;
+}
+.flex-col-xs-50 {
+	width: calc(50% - 3px);
+}
+
+/*
+ * List need to be ordered desecding size 
+ * in order to overwrite classnames for larger media
+ */
+$handheld-sizes: lg md sm xs;
+@include respond-to(handhelds) {
+		
+  @each $size in $handheld-sizes {
+  	@if $size == xs {
+  		.flex-col-#{$size}-100 {
+	  		width: 100% !important;
+	    }
+	    .flex-col-#{$size}-50 {
+	  		width: calc(50% - 3px) !important;
+	    }
+  	} @else {
+	  	.flex-col-#{$size}-100 {
+	  		width: 100%;
+	    }
+	    .flex-col-#{$size}-50 {
+	  		width: calc(50% - 3px);
+	    }
+  	}
+  }
+}
+
+/*
+ * Manual writing is shorter than @each loop
+ * no point of wrting in sass @each loop
+ */
+@include respond-to(handhelds-landscape) {
+	.flex-col-xs-100 {
+		width: 100%;
+	}
+	.flex-col-xs-50 {
+		width: calc(50% - 3px);
+	}
+	.flex-col-sm-100 {
+		width: 100% !important;
+	}
+	.flex-col-sm-50 {
+		width: calc(50% - 3px) !important;
+	}
+}
+
+/*
+ * List need to be ordered ascending size 
+ * in order to overwrite classnames for smaller media
+ */
+$medium-sizes: xs sm md;
+@include respond-to(tablet) {
+	@each $size in $medium-sizes {
+  	@if $size == md {
+  		.flex-col-#{$size}-100 {
+	  		width: 100% !important;
+	    }
+	    .flex-col-#{$size}-50 {
+	  		width: calc(50% - 3px) !important;
+	    }
+  	} @else {
+	  	.flex-col-#{$size}-100 {
+	  		width: 100%;
+	    }
+	    .flex-col-#{$size}-50 {
+	  		width: calc(50% - 3px);
+	    }
+  	}
+  }
+}
+
+/*
+ * List need to be ordered ascending size 
+ * in order to overwrite classnames for smaller media
+ */
+$wide-sizes: xs sm md lg;
+@include respond-to(wide) {
+	@each $size in $wide-sizes {
+  	@if $size == lg {
+  		.flex-col-#{$size}-100 {
+	  		width: 100% !important;
+	    }
+	    .flex-col-#{$size}-50 {
+	  		width: calc(50% - 3px) !important;
+	    }
+  	} @else {
+	  	.flex-col-#{$size}-100 {
+	  		width: 100%;
+	    }
+	    .flex-col-#{$size}-50 {
+	  		width: calc(50% - 3px);
+	    }
+  	}
+  }
+}

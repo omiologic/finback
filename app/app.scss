@@ -1,22 +1,7 @@
-body {
-	height: 100%;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;	
-	color: rgb(255, 255, 255);
-}
 
-h1, h2, h3, h4, h5 {
-	font-family: 'Patua One', cursive;
-}
-
-.fullscreen {
-  width: 100vw;
-  height: 100vh; 
-}
-
-
-
+@import '/assets/scss/font';
 @import '/assets/scss/media';
+@import '/assets/scss/flex';
 @import '/assets/scss/color';
 @import '/assets/scss/button';
 @import './routes/Root/root.stylesheet.scss';
@@ -33,21 +18,21 @@ h1, h2, h3, h4, h5 {
   color: rgb(255, 255, 255);
 }
 
-.smart-sections > section { 
-  
-  &:not(.fullscreen) {    
-    margin: 0 10px 10px 10px;
-    @include respond-to(handhelds) {
-      width: 100vw;
+.smart-sections {
+  padding-bottom: 10px;
+  background: #211f20;
+
+  &>section { 
+    position: relative;
+    &:not(.fullscreen) {    
+      margin: 0 10px 10px 10px;
+      width: calc(100% - 20px);    
+      @include respond-to(wide) {
+        margin: 0 10% 10px 10%;
+        width: auto;      
+      }
     }
-    @include respond-to(medium) {
-      width: 100vw;
-    }
-    @include respond-to(wide) {
-      margin: 0 10% 10px 10%;
-      width: auto;
-    }
-  }  
+  }
 }
 
 
