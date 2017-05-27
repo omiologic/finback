@@ -19,7 +19,7 @@ const medium = [
 	// },
 	{
 		id: 3,
-		url: 'Oscillation',
+		url: 'FieldScout',
 		type: 'component',
 		sort: 1
 	}

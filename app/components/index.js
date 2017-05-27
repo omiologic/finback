@@ -21,3 +21,5 @@ import BeerComponent from './Beer/beer';
 import OscillationComponent from './Beer/oscillation';
 export const Beer = BeerComponent;
 export const Oscillation = OscillationComponent;
+import FieldScoutComponent from './Beer/fieldscout';
+export const FieldScout = FieldScoutComponent;

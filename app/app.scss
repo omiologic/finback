@@ -9,8 +9,15 @@
 
 @import './components/Content/stylesheet.scss';
 @import './components/Beer/oscillation.scss';
+@import './components/Beer/fieldscout.scss';
 @import './components/MainGrid/MainGrid.scss';
 @import './components/Footer/Footer.scss';
+
+.perspective-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
 #app {
   font-family: 'Roboto', sans-serif;
