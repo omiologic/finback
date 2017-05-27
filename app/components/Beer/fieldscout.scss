@@ -1,0 +1,23 @@
+#fieldscout {	
+	background-color: rgba(63, 88, 64, 1);
+	width: 100%;
+  height: 100%;
+  
+	.arrow {
+		top: 11%;
+		position: absolute;
+	  width: 0; 
+	  height: 0;   
+	  transform: translateY(100%);
+	  transition: 2s ease-out;
+
+	  &:first-child {			
+			transition: 3s ease-out;		
+		}
+
+		&.animate {
+			transform: translateY(0%);
+		}
+	}
+}
+
